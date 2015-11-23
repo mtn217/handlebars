@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Handlebars tutorial</title>
+		<link rel="stylesheet" href="main.css">
+	</head>
+	<body>
+
+		<section id="content"></section>
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
+        
+		<script id="contact-template" type="text/template">
+            <h1>{{title}}</h1>
+            <ul class="people">
+                {{#people}}
+                    <li class="person">
+                        <h3>{{name}}</h3>
+                        <div>Age: {{age}}</div>
+                        <a href="mailto:{{email}}">Contact {{name}}</a>
+                    </li>
+                {{/people}}
+            </ul>
+		</script>
+		<script src="script.js"></script>
+	</body>
+</html>
